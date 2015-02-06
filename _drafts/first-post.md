@@ -4,7 +4,7 @@ title: "My first post"
 date: 2015-02-05 20:44:00
 ---
 
-## This is a draft of my first post
+### This is start of my journey
 
 A little about myself.  I have always been interested in web development.  I made several attempts in the past to learn on my own, utlizing free resources, mostly learning HTML, CSS and Javascript/JQuery.  I ended picking up bits and pieces of knowledge, maybe enough to create a simple static website, but not anything functional.  Upon more research, I realized that I was more interested in the backend of things.  I was never a great designer, any representation was done through stick figure drawings.  Heck I probably could not even draw a straight line in Photoshop, and there is a tool for that!
 
