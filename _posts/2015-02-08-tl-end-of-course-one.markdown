@@ -10,7 +10,7 @@ categories: web development
 puts "Hello World!"
 {% endhighlight linenos %}
 
-I just finished course 1 of the Tealeaf Academy curriculum, Introduction to Ruby and Web Development.  I started with the prep course work where students are tasked to read a few books and follow some online tutorials.  This is optional for those who have been programming with Ruby already. The actual course then started off with lecture videos and writing a simple calculator app.  The lecture videos are quite long and contain a lot of information, the prep course was really helpful as I am complete noob at this.
+I just finished course 1 of the Tealeaf Academy curriculum, Introduction to Ruby and Web Development.  I started with the prep course work where students are tasked to read a few books and follow some online tutorials.  This is optional for those who have been programming with Ruby already. The actual course then started off with lecture videos and writing a simple calculator app.  The lecture videos are quite long and contain a lot of information, the prep course was really helpful as I am a complete noob at this.
 
 The next tasks were to write a Rock, Paper, Scissors app and a Tic Tac Toe app, both played on the command line.  The instructors teach you to write in pseudo-code, laying out the logic in simple English.  That is harder than it sounds, as you need to be quite specific, unlike our brains, computers are not great at understanding context.  Then next step is translating that logic into Ruby code.  The last project was a Blackjack game also played in the command line.  That was week 1.
 
