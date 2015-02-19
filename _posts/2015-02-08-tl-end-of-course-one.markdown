@@ -21,9 +21,9 @@ Class Student
   end
 end
 
-student_one = Student.new("Kevin")
-puts "#{student_one} is studying to become a Web Developer."
-#=> "Kevin is studying to become a Web Developer."
+student_one = Student.new("Me")
+puts "#{student_one}! is studying to become a Web Developer."
+#=> "Me is studying to become a Web Developer."
 {% endhighlight linenos%}
 
 On to week 2, here we learned about Object Oriented Programming (OOP). As it turns out, all the coding in week 1 was procedural.  Here we built all the apps from week 1, but using an OO approach. This concept was confusing at first, but the instructors explain everything very well.  It is emphasized several times in the course, that coding is not just learned by reading, you have to write out the code yourself.  I found this to be very, very true. After reading or listening to the lectures, I felt like I understood what I had to do, but struggled when I actually had to code it out.
