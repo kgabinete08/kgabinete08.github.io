@@ -13,11 +13,11 @@ tacos = Lunch.new(5, 500)
 salad = Lunch.new(7, 300)
 
 tacos.price
-=> 5
+#=> 5
 salad.calories
-=> 300
+#=> 300
 salad == tacos
-=> false
+#=> false
 {% endhighlight linenos %}
 
 Finished the Pragmatic Studios Ruby Course.  It was a very good supplement to Course 1 of Tealeaf Academy, it went deeper into the Ruby language and covered some topics that I was not familiar with.
