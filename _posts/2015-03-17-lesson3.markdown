@@ -1,0 +1,41 @@
+---
+layout: post
+title:  "Tealeaf course 2 lesson 3"
+date:   2015-03-14  20:10:00
+categories: web development
+---
+
+So for course 2 at Tealeaf Academy, our main app is called Postit, which is basically a clone of the site Reddit.  We are building this using Ruby on Rails.  After lesson 3, the app has been deployed to Heroku and it has enough features to make it feel like a full web application.  We have implemented user registration, logged in user can create posts, comment on posts and voting as well through polymorphic association.
+
+### Polymorphic Association ###
+
+{% highlight ruby %}
+class User < ActiveRecord::Base
+  has_many :photos
+  has_many :videos
+  has_many :likes
+end
+
+class Photo < ActiveRecord::Base
+  belongs_to :user
+  has_many :likes, as: :likeable # => polymorpic
+end
+
+class Video < ActiveRecord::Base
+  belongs_to :user
+  has_many :likes, as: :likeable # => polymorphic
+end
+
+class Like < ActiveRecord::Base
+  belongs_to :user
+  belongs_to :likeable, polymorphic: true # => polymorphic
+end
+
+{% endhighlight linenos %}
+
+The code above sets the polymorphic association between `Likes` and model objects (`Photo`, `Video`).  On the database side for likes, we need columns for the `user_id`, `likeable_type` and `likeable_id`.  
+
+
+
+
+
