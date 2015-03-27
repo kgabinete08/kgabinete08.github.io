@@ -1,0 +1,58 @@
+---
+layout: post
+title:  "Tealeaf course 2 lesson 4"
+date:   2015-03-26  19:45:00
+categories: web development
+---
+
+Just finished my Postit app for the second course of Tealeaf Academy.  We covered a lot of topics in the last week, including slugging, rails flavored Ajax (Server-generated Javascript), extracting logic to modules, implementing time zones, building Ruby gems, uploading your gem to rubygems.org and implementing a simple admin role.
+
+### Simple admin role ###
+
+We add a role column to the `User` model where we store a string such as `admin`.  Then we have a method to execute a simple check to see if that string is present.
+
+{% highlight ruby %}
+
+class User < ActiveRecord::Base
+# code omitted for brevity
+
+  def admin?
+    self.role == 'admin'
+  end
+end
+
+{% endhighlight linenos %}
+
+We can then use our `.admin?` method to hide and show some of app's features based on the user's role.
+
+### Time Zones ###
+
+Rails provides us with a nice method `time_zone_select` which gives us a selection of time zones, that we can use in our app.
+
+{% highlight erb %}
+
+<%= f.label :time_zone %>
+<%= f.time_zone_select :time_zone, ActiveSupport::TimeZone.us_zones, default: Time.zone.name %>
+
+{% endhighlight %}
+
+The code above produces a nice dropdown list of all the time zones, with US time zones shown at the top for easy access.
+
+{% highlight ruby %}
+
+def display_time(time)
+  if logged_in? && !current_user.time_zone.blank?
+    time = time.in_time_zone(current_user.time_zone)
+  end
+  time.try(:strftime, "%l:%M%P %b. %e, %Y (%Z)") # time output format
+end
+
+{% endhighlight %}
+
+We can then use the above code as helper method to display the time according to the user's time zone.  If the user does not have a time zone selected, our app will display the default time zone which we set in our `application.rb` file.
+
+Bonus:
+
+I used the `.try` method here to avoid raising an exception when a user submits a blank form, which would return `nil`.  Instead of raising an exception, we want to be able to render an error message asking the user to try again with the correct input.
+
+
