@@ -4,7 +4,7 @@ title:  "End of Tealeaf course 1"
 date:   2015-02-08  18:00:00
 categories: web development
 ---
-## End of Tealeaf Academy Course 1
+## End of Tealeaf Academy Course 1 ##
 
 {% highlight ruby %}
 puts "Hello World!"

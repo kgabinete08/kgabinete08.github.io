@@ -23,12 +23,12 @@ Many to Many association
 {% highlight ruby %}
 class Developer < ActiveRecord::Base
   has_many :projecthandlers
-  has_many :projects through: :projecthandler
+  has_many :projects, through: :projecthandler
 end
 
 class Project < ActiveRecord::Base
   has_many :projecthandlers
-  has_many :developers through: :projecthandlers 
+  has_many :developers, through: :projecthandlers 
 end
 
 class ProjectHandler < ActiveRecord::Base
